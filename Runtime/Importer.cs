@@ -368,9 +368,9 @@ namespace Parabox.Stl
 			{
                 var mesh = new Mesh
                 {
+                    indexFormat = indexFormat,
                     vertices = pos.ToArray(),
-                    normals = nrm.ToArray(),
-                    indexFormat = indexFormat
+                    normals = nrm.ToArray()
                 };
                 if(modelCoordinateSpace == CoordinateSpace.Right)
 					tri.Reverse();
@@ -440,10 +440,10 @@ namespace Parabox.Stl
 
                 meshes[meshIndex] = new Mesh
                 {
+                    indexFormat = indexFormat,
                     vertices = v,
                     normals = n,
-                    triangles = t,
-                    indexFormat = indexFormat
+                    triangles = t
                 };
             }
 
